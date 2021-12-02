@@ -10,6 +10,9 @@ export class TopheadingComponent implements OnInit {
 
   constructor(private _services:NewsapiservicesService) { }
 
+  totalLength:any;
+  page:number = 1;
+
   // Display data
   TopheadingDisplay:any = [];
 
@@ -20,7 +23,7 @@ export class TopheadingComponent implements OnInit {
 
       console.log(result);
       this.TopheadingDisplay = result.articles;
-
+      this.totalLength = result.length;
     });
 
   }

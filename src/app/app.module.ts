@@ -11,6 +11,8 @@ import { BusinessnewsComponent } from './businessnews/businessnews.component';
 // for HttpClient import:
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    LoadingBarHttpClientModule
+    LoadingBarHttpClientModule,
+    NgxPaginationModule
   ],
   providers: [NewsapiservicesService],
   bootstrap: [AppComponent]
